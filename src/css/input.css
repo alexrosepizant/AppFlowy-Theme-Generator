@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Syne", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Toast spring animation — cubic-bezier not expressible via Tailwind alone */
+#toast {
+  transform: translateX(-50%) translateY(80px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#toast.visible {
+  transform: translateX(-50%) translateY(0);
+}

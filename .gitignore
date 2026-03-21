@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+
+# Generated files
+dist/
+*.zip

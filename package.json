@@ -1,0 +1,23 @@
+{
+  "name": "appflowy-theme-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Visual theme generator for AppFlowy",
+  "scripts": {
+    "build": "tsc --noEmit && npm run build:js && npm run build:css",
+    "build:js": "esbuild src/ts/app.ts --bundle --outfile=dist/bundle.js --target=es2017",
+    "build:css": "npx @tailwindcss/cli -i src/css/input.css -o dist/styles.css --minify",
+    "dev:js": "esbuild src/ts/app.ts --bundle --outfile=dist/bundle.js --target=es2017 --watch",
+    "dev:css": "npx @tailwindcss/cli -i src/css/input.css -o dist/styles.css --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.8.0"
+  }
+}
