@@ -1,16 +1,5 @@
 import type { ColorGroup } from "./types";
 
-/**
- * All colour groups displayed in the generator UI.
- *
- * Each colour entry is a tuple: [key, label, desc, hex, opacity, style?]
- *   - key      : internal identifier (matches AppFlowy JSON keys)
- *   - label    : displayed name
- *   - desc     : short description of the colour's role
- *   - hex      : default value (#rrggbb)
- *   - opacity  : opacity in % (0–100) used when exporting as ARGB
- *   - style    : 'accent' | 'sidebar' | undefined — controls visual highlight
- */
 export const COLOR_GROUPS: ColorGroup[] = [
   {
     label: "Accent & Selection",

@@ -1,10 +1,6 @@
-// ─── Colour data types ────────────────────────────────────────────────────────
-
 export type ColorStyle = "accent" | "sidebar";
 
-/**
- * A colour definition tuple: [key, label, desc, hex, opacity, style?]
- */
+// [key, label, desc, hex, opacity, style?]
 export type ColorDef = [
   key: string,
   label: string,
@@ -19,8 +15,6 @@ export interface ColorGroup {
   badge?: { text: string; cls: string };
   colors: ColorDef[];
 }
-
-// ─── State types ──────────────────────────────────────────────────────────────
 
 export interface ColorEntry {
   hex: string;
