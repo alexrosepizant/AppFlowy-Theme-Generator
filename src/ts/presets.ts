@@ -2,6 +2,7 @@ import { state, syncTints } from "./state";
 import { renderGroups, bindColorEvents } from "./render";
 import { updatePreview } from "./preview";
 import monochrome from "../presets/monochrome.json";
+import monochromeLight from "../presets/monochrome-light.json";
 import dracula from "../presets/dracula.json";
 import notionLight from "../presets/notion-light.json";
 import notionDark from "../presets/notion-dark.json";
@@ -42,6 +43,7 @@ export interface PresetTheme {
 
 export const PRESETS: PresetTheme[] = [
   monochrome,
+  monochromeLight,
   dracula,
   notionLight,
   notionDark,
