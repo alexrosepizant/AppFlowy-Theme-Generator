@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="assets/logo.svg" width="64" height="64" alt="AppFlowy Theme Generator">
+  <img src="assets/logo.svg" width="64" height="64" alt="Theme Generator for AppFlowy">
 </p>
 
-# AppFlowy Theme Generator
+# Theme Generator for AppFlowy
+
+> Unofficial community tool — not affiliated with or endorsed by [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy).
 
 [![Build & Deploy](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml/badge.svg)](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
