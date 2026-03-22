@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.svg" width="64" height="64" alt="AppFlowy Theme Generator">
+</p>
+
 # AppFlowy Theme Generator
 
 [![Build & Deploy](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml/badge.svg)](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml)
@@ -64,18 +68,20 @@ appflowy-theme-generator/
 
 ## What you can and cannot control
 
-| Category                           | Controllable via JSON?            |
-| ---------------------------------- | --------------------------------- |
-| Accent colour & selection          | ✅ Yes                            |
-| Sidebar background                 | ✅ Yes                            |
-| Editor background                  | ✅ Yes                            |
-| Text colours                       | ✅ Yes                            |
-| Hover states                       | ✅ Yes                            |
-| Separators & borders               | ✅ Yes                            |
-| Icons                              | ✅ Yes                            |
-| Tags & semantic colours            | ✅ Yes                            |
-| Tint scale (tint1–9)               | ✅ Yes                            |
-| Primary buttons (Sign In, Create…) | ❌ No — hardcoded in Flutter/Dart |
+| Category                              | Controllable via JSON?            |
+| ------------------------------------- | --------------------------------- |
+| Accent colour & selection             | ✅ Yes                            |
+| Sidebar background (`sidebarBg`)      | ✅ Yes                            |
+| Editor surface (`surface`)            | ✅ Yes                            |
+| Top bar background (`topbarBg`)       | ✅ Yes                            |
+| Input / toolbar background (`input`)  | ✅ Yes                            |
+| Text colours                          | ✅ Yes                            |
+| Hover states                          | ✅ Yes                            |
+| Separators & borders                  | ✅ Yes                            |
+| Icons                                 | ✅ Yes                            |
+| Semantic colours (red, yellow, green) | ✅ Yes                            |
+| Tint scale (`tint1`–`tint9`)          | ✅ Yes                            |
+| Primary buttons (Sign In, Create…)    | ❌ No — hardcoded in Flutter/Dart |
 
 ## AppFlowy theme format
 
@@ -84,9 +90,14 @@ Example:
 
 ```json
 {
-  "main": "0xFFA8C5FF",
-  "bg": "0xFF111113",
-  "text": "0xFFB8B8C8"
+  "main": "0xFFE8E8E8",
+  "sidebarBg": "0xFF0A0A0A",
+  "surface": "0xFF111111",
+  "topbarBg": "0xFF080808",
+  "input": "0xFF181818",
+  "text": "0xFF909090",
+  "strongText": "0xFFFFFFFF",
+  "divider": "0xFF1A1A1A"
 }
 ```
 
@@ -100,8 +111,9 @@ AppFlowy requires **both** a `.dark.json` and a `.light.json` file inside the `.
 | [esbuild](https://esbuild.github.io/)                               | ^0.25   | MIT        |
 | [TypeScript](https://www.typescriptlang.org/)                       | ^5.8    | Apache-2.0 |
 | [Tailwind CSS](https://tailwindcss.com/)                            | ^4.0    | MIT        |
+| [Poppins](https://fonts.google.com/specimen/Poppins) (Google Fonts) | —       | OFL-1.1    |
+| [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts)     | —       | OFL-1.1    |
 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Google Fonts) | —       | OFL-1.1    |
-| [Syne](https://fonts.google.com/specimen/Syne) (Google Fonts)       | —       | OFL-1.1    |
 
 ## License
 

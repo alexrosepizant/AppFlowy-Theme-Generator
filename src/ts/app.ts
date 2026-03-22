@@ -357,3 +357,20 @@ el("colorGroups").addEventListener("input", (e) => {
 el("btnDownload").addEventListener("click", () => {
   void downloadTheme();
 });
+
+// ─── GitHub stars ─────────────────────────────────────────────────────────────
+
+fetch("https://api.github.com/repos/alexrosepizant/AppFlowy-Theme-Generator")
+  .then((r) => r.json())
+  .then((data: { stargazers_count?: number }) => {
+    const count = data.stargazers_count;
+    if (typeof count === "number") {
+      const label =
+        count >= 1000 ? `${(count / 1000).toFixed(1)}k` : String(count);
+      const el2 = document.getElementById("ghStarsCount");
+      if (el2) el2.textContent = label;
+    }
+  })
+  .catch(() => {
+    /* silently ignore if offline */
+  });
