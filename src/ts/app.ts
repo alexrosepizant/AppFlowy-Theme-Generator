@@ -183,40 +183,21 @@ function updatePreview(): void {
     item.style.color = c("text").hex;
   });
 
-  // Avatar / username
-  const avatar = el("mockAvatar");
-  avatar.style.background = rgba(c("main").hex, 0.18);
-  avatar.style.color = c("main").hex;
-  el("mockUsername").style.color = c("secondaryText").hex;
-
   // Editor content
   el("mockContent").style.background = c("surface").hex;
   el("mockContentTop").style.color = c("text").hex;
   el("mockPageTitle").style.color = c("text").hex;
+  el("mockContextLabel").style.color = c("secondaryText").hex;
   el("mockHeading").style.color = c("strongText").hex;
   el("mockText").style.color = c("text").hex;
 
-  // Tags
-  const tagMap: [string, string][] = [
-    ["mockTag1", "red"],
-    ["mockTag2", "green"],
-    ["mockTag3", "yellow"],
-  ];
-  tagMap.forEach(([id, key]) => {
-    const tag = el(id);
-    tag.style.background = rgba(c(key).hex, 0.15);
-    tag.style.color = c(key).hex;
-  });
-
-  // Accent action button
-  const btnAccent = el("mockBtnAccent");
-  btnAccent.style.background = rgba(c("main").hex, 0.18);
-  btnAccent.style.color = c("main").hex;
-
-  // Ghost action button
-  const btnGhost = el("mockBtnGhost");
-  btnGhost.style.borderColor = rgba(c("main").hex, 0.3);
-  btnGhost.style.color = c("secondaryText").hex;
+  // To-do list
+  el("mockTodoLabel").style.color = c("strongText").hex;
+  el("mockNotice").style.color = c("text").hex;
+  el("mockTodoRow2").style.color = c("text").hex;
+  const checkboxBorder = rgba(c("text").hex, 0.35);
+  el("mockTodoCheckbox1").style.borderColor = checkboxBorder;
+  el("mockTodoCheckbox2").style.borderColor = checkboxBorder;
 
   // Notice
   el("mockNotice").style.color = c("secondaryText").hex;
