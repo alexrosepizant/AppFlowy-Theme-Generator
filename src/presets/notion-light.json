@@ -1,0 +1,28 @@
+{
+  "id": "notion-light",
+  "label": "Notion Light",
+  "dark": false,
+  "accent": "#4d84ff",
+  "colors": {
+    "surface": { "hex": "#f9f9f9", "opacity": 100 },
+    "sidebarBg": { "hex": "#eaeaea", "opacity": 100 },
+    "topbarBg": { "hex": "#f9f9f9", "opacity": 100 },
+    "input": { "hex": "#f4f4f4", "opacity": 100 },
+    "main": { "hex": "#4d84ff", "opacity": 100 },
+    "text": { "hex": "#3e3e3e", "opacity": 100 },
+    "secondaryText": { "hex": "#6e6e6e", "opacity": 100 },
+    "strongText": { "hex": "#3e3e3e", "opacity": 100 },
+    "hint": { "hex": "#9c9c9c", "opacity": 100 },
+    "icon": { "hex": "#3e3e3e", "opacity": 100 },
+    "white": { "hex": "#909090", "opacity": 100 },
+    "hoverBG1": { "hex": "#e1e1e1", "opacity": 100 },
+    "hoverBG2": { "hex": "#d1d1d1", "opacity": 100 },
+    "hoverFG": { "hex": "#3e3e3e", "opacity": 100 },
+    "divider": { "hex": "#dcdcdc", "opacity": 100 },
+    "border": { "hex": "#d1d1d1", "opacity": 100 },
+    "shadow": { "hex": "#000000", "opacity": 10 },
+    "red": { "hex": "#f28b82", "opacity": 100 },
+    "yellow": { "hex": "#f9e788", "opacity": 100 },
+    "green": { "hex": "#6dbb6d", "opacity": 100 }
+  }
+}

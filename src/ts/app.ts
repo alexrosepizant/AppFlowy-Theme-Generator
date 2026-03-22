@@ -61,6 +61,7 @@ function renderPresets(): void {
       btn.addEventListener("click", () => {
         loadPreset(preset.id);
         activePresetId = preset.id;
+        el<HTMLInputElement>("themeName").value = preset.label.replace(/\s+/g, "");
         document.querySelectorAll<HTMLButtonElement>("[data-preset-id]").forEach((b) => {
           const active = b.dataset.presetId === activePresetId;
           b.className = active

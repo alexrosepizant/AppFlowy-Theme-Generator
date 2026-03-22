@@ -1,0 +1,28 @@
+{
+  "id": "developer-dark",
+  "label": "Developer",
+  "dark": true,
+  "accent": "#68c3ff",
+  "colors": {
+    "surface": { "hex": "#121212", "opacity": 100 },
+    "sidebarBg": { "hex": "#1e1e1e", "opacity": 100 },
+    "topbarBg": { "hex": "#121212", "opacity": 100 },
+    "input": { "hex": "#333333", "opacity": 100 },
+    "main": { "hex": "#68c3ff", "opacity": 100 },
+    "text": { "hex": "#e5e5e5", "opacity": 100 },
+    "secondaryText": { "hex": "#a5a5a5", "opacity": 100 },
+    "strongText": { "hex": "#e5e5e5", "opacity": 100 },
+    "hint": { "hex": "#868686", "opacity": 100 },
+    "icon": { "hex": "#e5e5e5", "opacity": 100 },
+    "white": { "hex": "#e5e5e5", "opacity": 100 },
+    "hoverBG1": { "hex": "#3e3e3e", "opacity": 100 },
+    "hoverBG2": { "hex": "#4a4a4a", "opacity": 100 },
+    "hoverFG": { "hex": "#121212", "opacity": 100 },
+    "divider": { "hex": "#3d3d3d", "opacity": 100 },
+    "border": { "hex": "#4a4a4a", "opacity": 100 },
+    "shadow": { "hex": "#000000", "opacity": 16 },
+    "red": { "hex": "#d14343", "opacity": 100 },
+    "yellow": { "hex": "#d1d15b", "opacity": 100 },
+    "green": { "hex": "#7bd76d", "opacity": 100 }
+  }
+}
