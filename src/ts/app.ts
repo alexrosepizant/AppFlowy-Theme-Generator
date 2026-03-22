@@ -83,6 +83,16 @@ updatePreview();
 fetchGitHubStars();
 renderPresets();
 
+const defaultPreset = "monochrome";
+loadPreset(defaultPreset);
+activePresetId = defaultPreset;
+document.querySelectorAll<HTMLButtonElement>("[data-preset-id]").forEach((b) => {
+  const active = b.dataset.presetId === activePresetId;
+  b.className = active
+    ? "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium border transition-all duration-[150ms] border-[#8427E0] text-[#8427E0] bg-[#8427E0]/5 cursor-pointer"
+    : "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-medium border transition-all duration-[150ms] border-[#9327ff]/15 text-[#6F748C] hover:border-[#9327ff]/40 hover:text-[#101012] cursor-pointer";
+});
+
 el("btnDownload").addEventListener("click", () => {
   const name = el<HTMLInputElement>("themeName").value.trim() || "MyTheme";
   downloadTheme(name)

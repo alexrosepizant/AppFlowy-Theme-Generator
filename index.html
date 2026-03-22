@@ -95,25 +95,6 @@
       </div>
     </header>
 
-    <div class="max-w-[1400px] mx-auto mb-5">
-      <div
-        class="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3.5"
-      >
-        <div class="text-base shrink-0 mt-0.5">⚠️</div>
-        <div class="text-[13px] text-amber-800 leading-[1.65]">
-          <strong class="font-semibold text-amber-900"
-            >Some colors can't be changed via JSON.</strong
-          ><br />
-          AppFlowy's primary action buttons (e.g. "Share") get their color from Flutter's source
-          code — not from the theme file. You'd need to recompile the app to change those.<br /><br />
-          <span class="text-amber-700"
-            >Everything in this panel <em>is</em> JSON-controlled: accent color, sidebar, text,
-            tags, hover &amp; borders.</span
-          >
-        </div>
-      </div>
-    </div>
-
     <div
       class="max-w-[1400px] mx-auto grid grid-cols-[360px_1fr] xl:grid-cols-[420px_1fr] gap-5 xl:gap-8 items-start max-[720px]:grid-cols-1"
     >
@@ -125,8 +106,15 @@
         </div>
 
         <div class="font-semibold text-[13px] text-[#101012] mb-1">Colour Palette</div>
-        <div class="text-[12px] text-[#6F748C] mb-5 pb-4 border-b border-[#9327ff]/10">
+        <div class="text-[12px] text-[#6F748C] mb-3">
           Click any swatch or type a hex value to adjust
+        </div>
+        <div class="flex gap-2.5 items-start bg-amber-50 border border-amber-200 rounded-xl px-3 py-2.5 mb-5">
+          <div class="text-[13px] shrink-0">⚠️</div>
+          <div class="text-[11px] text-amber-800 leading-[1.6]">
+            <strong class="font-semibold text-amber-900">Some colors can't be changed via JSON.</strong>
+            Primary action buttons (e.g. "Share") come from Flutter source code — not the theme file.
+          </div>
         </div>
 
         <div id="colorGroups"></div>
