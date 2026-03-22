@@ -2,7 +2,7 @@
   "id": "monochrome",
   "label": "Monochrome",
   "dark": true,
-  "accent": "#e8e8e8",
+  "accent": "#171717",
   "colors": {
     "surface": { "hex": "#111111", "opacity": 100 },
     "sidebarBg": { "hex": "#0a0a0a", "opacity": 100 },
