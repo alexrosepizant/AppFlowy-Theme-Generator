@@ -12,15 +12,12 @@ function showToast(message: string): void {
 
 async function fetchGitHubStars(): Promise<void> {
   try {
-    const res = await fetch(
-      "https://api.github.com/repos/alexrosepizant/AppFlowy-Theme-Generator",
-    );
+    const res = await fetch("https://api.github.com/repos/alexrosepizant/AppFlowy-Theme-Generator");
     if (!res.ok) return;
     const data = (await res.json()) as { stargazers_count?: number };
     const count = data.stargazers_count;
     if (typeof count !== "number") return;
-    const label =
-      count >= 1000 ? `${(count / 1000).toFixed(1)}k` : String(count);
+    const label = count >= 1000 ? `${(count / 1000).toFixed(1)}k` : String(count);
     const node = document.getElementById("ghStarsCount");
     if (node) node.textContent = label;
   } catch {
@@ -37,5 +34,7 @@ el("btnDownload").addEventListener("click", () => {
   const name = el<HTMLInputElement>("themeName").value.trim() || "MyTheme";
   downloadTheme(name)
     .then(() => showToast(`✓ ${name}.flowy_plugin.zip downloaded!`))
-    .catch(console.error);
+    .catch((err: unknown) => {
+      throw err;
+    });
 });

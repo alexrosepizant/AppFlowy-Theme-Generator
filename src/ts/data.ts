@@ -68,73 +68,31 @@ export const COLOR_GROUPS: ColorGroup[] = [
     colors: [
       ["strongText", "Strong text", "Headings, main content", "#ffffff", 100],
       ["text", "Body text", "Body copy (text / shader5)", "#909090", 100],
-      [
-        "secondaryText",
-        "Secondary text",
-        "Metadata, subtitles, labels",
-        "#606060",
-        100,
-      ],
+      ["secondaryText", "Secondary text", "Metadata, subtitles, labels", "#606060", 100],
       ["hint", "Placeholder", "Empty field text", "#3d3d3d", 100],
     ],
   },
   {
     label: "Hover & Interactions",
     colors: [
-      [
-        "hoverBG1",
-        "Hover background 1",
-        "Item hover — translucent white",
-        "#ffffff",
-        10,
-      ],
-      [
-        "hoverBG2",
-        "Hover background 2",
-        "Item hover — typically accent colour",
-        "#e8e8e8",
-        100,
-      ],
+      ["hoverBG1", "Hover background 1", "Item hover — translucent white", "#ffffff", 10],
+      ["hoverBG2", "Hover background 2", "Item hover — typically accent colour", "#e8e8e8", 100],
       ["hoverFG", "Hover text", "Text colour on hover", "#ffffff", 90],
     ],
   },
   {
     label: "Separators & Borders",
     colors: [
-      [
-        "divider",
-        "Divider",
-        "Separator lines (divider / shader3)",
-        "#1a1a1a",
-        100,
-      ],
-      [
-        "border",
-        "Component border",
-        "Field and card borders (borderColor)",
-        "#202020",
-        100,
-      ],
+      ["divider", "Divider", "Separator lines (divider / shader3)", "#1a1a1a", 100],
+      ["border", "Component border", "Field and card borders (borderColor)", "#202020", 100],
       ["shadow", "Shadow", "Shadow of floating menus", "#000000", 100],
     ],
   },
   {
     label: "Icons",
     colors: [
-      [
-        "icon",
-        "Default icon",
-        "Default icon colour (icon / shader5)",
-        "#606060",
-        100,
-      ],
-      [
-        "white",
-        "Inverted / white icon",
-        "Icons on coloured backgrounds (shader7)",
-        "#ffffff",
-        100,
-      ],
+      ["icon", "Default icon", "Default icon colour (icon / shader5)", "#606060", 100],
+      ["white", "Inverted / white icon", "Icons on coloured backgrounds (shader7)", "#ffffff", 100],
     ],
   },
   {
