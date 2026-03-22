@@ -9,6 +9,7 @@
     "build:css": "npx @tailwindcss/cli -i src/css/input.css -o dist/styles.css --minify",
     "dev:js": "esbuild src/ts/app.ts --bundle --outfile=dist/bundle.js --target=es2017 --watch",
     "dev:css": "npx @tailwindcss/cli -i src/css/input.css -o dist/styles.css --watch",
+    "dev:serve": "npx serve . --listen 3000",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

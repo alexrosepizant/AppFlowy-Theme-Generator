@@ -59,11 +59,11 @@ function renderGroups(): void {
 
   COLOR_GROUPS.forEach((group) => {
     const groupEl = document.createElement("div");
-    groupEl.className = "mb-[18px]";
+    groupEl.className = "mb-6";
     groupEl.innerHTML = `
       <div class="flex items-center gap-2 mb-2">
-        <div class="font-mono text-[10px] text-[#6b6b80] tracking-[0.1em] uppercase">${group.label}</div>
-        ${group.badge ? `<span class="font-mono text-[9px] px-1.5 py-0.5 rounded-sm ${group.badge.cls}">${group.badge.text}</span>` : ""}
+        <div class="font-semibold text-[12px] text-[#101012]">${group.label}</div>
+        ${group.badge ? `<span class="font-mono text-[10px] px-1.5 py-0.5 rounded-sm ${group.badge.cls}">${group.badge.text}</span>` : ""}
       </div>`;
     group.colors.forEach((def) => groupEl.appendChild(buildRow(def)));
     container.appendChild(groupEl);
@@ -77,28 +77,28 @@ function buildRow([key, label, desc, , , style]: ColorDef): HTMLElement {
 
   const { hex } = entry;
   const BASE =
-    "flex items-center gap-2.5 mb-1.5 py-[7px] px-2.5 rounded-lg border transition-colors duration-[150ms]";
+    "flex items-center gap-3 mb-2 py-2.5 px-3 rounded-xl border transition-colors duration-[150ms]";
   const variantClass =
     style === "accent"
-      ? "bg-[#a8c5ff]/5 border-[#a8c5ff]/20"
+      ? "bg-[#8427E0]/5 border-[#8427E0]/15"
       : style === "sidebar"
         ? "bg-[#7edaa8]/5 border-[#7edaa8]/20"
-        : "bg-[#1e1e24] border-transparent hover:border-[#2a2a35]";
+        : "bg-[#F9F9FC] border-transparent hover:border-[#9327ff]/15";
 
   const row = document.createElement("div");
   row.className = `${BASE} ${variantClass}`;
   row.innerHTML = `
-    <div class="w-[26px] h-[26px] rounded-md border border-white/10 cursor-pointer shrink-0 relative overflow-hidden"
+    <div class="w-[30px] h-[30px] rounded-lg border border-black/10 cursor-pointer shrink-0 relative overflow-hidden"
          id="sw_${key}" style="background:${hex}">
       <input type="color" value="${hex}" data-key="${key}"
              class="opacity-0 absolute inset-0 w-full h-full cursor-pointer border-none p-0">
     </div>
     <div class="flex-1 min-w-0">
-      <div class="font-mono text-[11px] text-[#e8e8f0] font-medium whitespace-nowrap overflow-hidden text-ellipsis">${label}</div>
-      ${desc ? `<div class="font-mono text-[9px] text-[#6b6b80] mt-0.5">${desc}</div>` : ""}
+      <div class="font-medium text-[13px] text-[#101012] whitespace-nowrap overflow-hidden text-ellipsis">${label}</div>
+      ${desc ? `<div class="text-[11px] text-[#6F748C] mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">${desc}</div>` : ""}
     </div>
     <input type="text" id="hi_${key}"
-           class="hex-input font-mono text-[11px] bg-[#0e0e10] border border-[#2a2a35] text-[#6b6b80] rounded px-1.5 py-1 w-[72px] text-center focus:outline-none focus:border-[#a8c5ff] focus:text-[#e8e8f0]"
+           class="hex-input font-mono text-[12px] bg-white border border-[#9327ff]/20 text-[#6F748C] rounded-lg px-2 py-1.5 w-[84px] text-center focus:outline-none focus:border-[#8427E0] focus:text-[#101012]"
            value="${hex.toUpperCase()}" data-key="${key}" maxlength="7">
   `;
   return row;
@@ -167,7 +167,8 @@ function updatePreview(): void {
   };
 
   // Sidebar
-  el("mockSidebar").style.background = c("bg").hex;
+  el("mockSidebar").style.background = c("sidebarBg").hex;
+  el("mockSidebar").style.color = c("text").hex;
   el("mockSidebarHeader").style.color = c("strongText").hex;
 
   // Active sidebar item
@@ -199,7 +200,7 @@ function updatePreview(): void {
   const tagMap: [string, string][] = [
     ["mockTag1", "red"],
     ["mockTag2", "green"],
-    ["mockTag3", "blue"],
+    ["mockTag3", "yellow"],
   ];
   tagMap.forEach(([id, key]) => {
     const tag = el(id);
@@ -225,29 +226,68 @@ function updatePreview(): void {
 
 /** Builds the AppFlowy theme JSON object from the current state. */
 function buildJSON(): Record<string, string> {
-  const mainHex = state["main"]?.hex ?? "#a8c5ff";
+  const mainHex = state["main"]?.hex ?? "#00BCF0";
   return {
+    // ── Surfaces ────────────────────────────────────────────────
     surface: cf("surface"),
-    bg: cf("bg"),
-    sidebarContainerBGColor: cf("sidebarContainerBGColor"),
+    sidebarBg: cf("sidebarBg"),
+    topbarBg: cf("topbarBg"),
+    input: cf("input"),
+    toolbarColor: cf("input"), // same source as input
+
+    // ── Shader scale (derived from semantic colours) ─────────────
+    shader1: cf("topbarBg"),
+    shader2: cf("surface"),
+    shader3: cf("divider"),
+    shader4: toAF("#505469", 100),
+    shader5: cf("text"),
+    shader6: toAF("#F2F2F2", 100),
+    shader7: cf("white"),
+
+    // ── Background scale ─────────────────────────────────────────
+    bg1: cf("surface"),
+    bg2: toAF("#EDEEF2", 100),
+    bg3: cf("main"),
+    bg4: toAF("#2C144B", 100),
+
+    // ── Accent ───────────────────────────────────────────────────
+    main1: cf("main"),
+    main2: cf("main"),
+    primary: cf("main"),
+    hover: cf("main"),
+    selector: toAF(mainHex, 12),
+    onPrimary: cf("topbarBg"),
+
+    // ── Text ─────────────────────────────────────────────────────
     text: cf("text"),
     secondaryText: cf("secondaryText"),
     strongText: cf("strongText"),
     hint: cf("hint"),
     icon: cf("icon"),
-    white: cf("white"),
-    borderColor: cf("border"),
-    borderGrayColor: cf("borderGray"),
-    dividerColor: cf("divider"),
-    shadowColor: cf("shadow"),
-    main: cf("main"),
-    selector: toAF(mainHex, 12),
+
+    // ── Hover & interactions ──────────────────────────────────────
     hoverBG1: cf("hoverBG1"),
     hoverBG2: cf("hoverBG2"),
     hoverBG3: toAF("#ffffff", 2),
     hoverFG: cf("hoverFG"),
-    toolbarColor: cf("toolbarColor"),
-    taginlineBg: toAF(mainHex, 15),
+
+    // ── Borders & separators ──────────────────────────────────────
+    borderColor: cf("border"),
+    divider: cf("divider"),
+    shadow: cf("shadow"),
+
+    // ── Component-specific ───────────────────────────────────────
+    questionBubbleBG: toAF(mainHex, 12),
+    progressBarBGColor: cf("divider"),
+    toggleButtonBGColor: toAF("#828282", 100),
+    calendarWeekendBGColor: cf("topbarBg"),
+    gridRowCountColor: cf("text"),
+    scrollbarColor: toAF("#ffffff", 25),
+    scrollbarHoverColor: toAF("#ffffff", 50),
+    lightIconColor: toAF("#8F959E", 100),
+    toolbarHoverColor: toAF("#F2F2F2", 100),
+
+    // ── Tint scale (derived from accent) ─────────────────────────
     tint1: toAF(mainHex, 10),
     tint2: toAF(mainHex, 20),
     tint3: toAF(mainHex, 30),
@@ -257,16 +297,11 @@ function buildJSON(): Record<string, string> {
     tint7: toAF(mainHex, 70),
     tint8: toAF(mainHex, 80),
     tint9: toAF(mainHex, 90),
+
+    // ── Semantic colours ─────────────────────────────────────────
     red: cf("red"),
-    orange: cf("orange"),
     yellow: cf("yellow"),
-    lime: cf("lime"),
     green: cf("green"),
-    aqua: cf("aqua"),
-    blue: cf("blue"),
-    purple: cf("purple"),
-    pink: cf("pink"),
-    brown: cf("brown"),
   };
 }
 

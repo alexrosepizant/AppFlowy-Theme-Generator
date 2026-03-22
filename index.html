@@ -5,22 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AppFlowy Theme Generator</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
-
   <!-- Styles -->
   <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body class="bg-[#0e0e10] text-[#e8e8f0] font-sans min-h-screen px-6 py-10">
+<body class="text-[#101012] font-sans min-h-screen px-6 py-12">
 
-<header class="max-w-[980px] mx-auto mb-10">
-  <div class="font-mono text-[11px] tracking-[0.2em] text-[#a8c5ff] uppercase mb-2.5">
-    AppFlowy · Theme Generator
+<header class="max-w-[980px] mx-auto mb-12">
+  <div class="flex items-center gap-3 mb-3">
+    <svg width="52" height="52" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="AppFlowy">
+      <g id="Layer 1">
+        <path d="M39.3893 24.0859C38.2579 30.2036 33.3209 35.5498 27.6075 38.5519C26.8927 38.9266 26.6068 39.141 25.8008 39.1928H37.3977C37.6588 39.201 37.9189 39.1568 38.1625 39.0627C38.4062 38.9686 38.6285 38.8265 38.8163 38.645C39.0041 38.4634 39.1535 38.246 39.2558 38.0056C39.358 37.7652 39.4109 37.5068 39.4115 37.2456V24.0859H39.3893Z" fill="#F7931E"/>
+        <path d="M15.1981 12.2815C15.0231 12.4245 14.8481 12.5576 14.6682 12.6833C11.7326 14.7488 2.77054 21.4481 0.742007 18.5643C-1.24709 15.7347 0.847994 7.70683 6.00684 3.84447C6.10543 3.7656 6.20402 3.69658 6.30508 3.6251C11.9076 -0.311199 16.0978 0.233524 18.1238 3.11982C20.0267 5.82618 17.8971 10.0681 15.1981 12.2815Z" fill="#8427E0"/>
+        <path d="M37.1026 18.4809C34.3297 20.4281 29.9546 18.1555 27.7881 15.3703C27.6993 15.2569 27.6155 15.141 27.5416 15.0277C25.4785 12.0896 18.7792 3.12755 21.663 1.10148C24.5468 -0.924595 32.8261 1.2888 36.6022 6.66455C36.686 6.78287 36.7674 6.91104 36.8487 7.01702C40.5089 12.4569 39.9322 16.4967 37.1026 18.4809Z" fill="#00B5FF"/>
+        <path d="M33.3933 36.1608C33.2947 36.2372 33.1986 36.3087 33.1025 36.3753C27.4999 40.319 23.3098 39.7644 21.2837 36.883C19.3833 34.1717 21.508 29.9372 24.207 27.7213C24.3795 27.5759 24.5594 27.4403 24.7394 27.3146C27.6749 25.2516 36.637 18.5547 38.6631 21.4361C40.6522 24.2657 38.5571 32.2985 33.3933 36.1608Z" fill="#FFBD00"/>
+        <path d="M17.751 38.8995C14.8672 40.9231 6.5879 38.7121 2.81182 33.3364C2.73295 33.2279 2.66147 33.1195 2.58752 33.011C-1.09736 27.5687 -0.515667 23.5067 2.309 21.5201C5.07944 19.5729 9.45694 21.843 11.621 24.6307C11.7098 24.7441 11.7936 24.8574 11.8675 24.9733C13.9404 27.9113 20.6373 36.8734 17.751 38.8995Z" fill="#E3006D"/>
+        <path d="M15.1977 12.2815C11.1923 14.0414 2.69862 17.7041 1.42185 14.7685C0.352121 12.3037 2.33383 7.25577 6.00886 3.84447C6.10745 3.7656 6.20604 3.69658 6.3071 3.6251C11.9071 -0.3112 16.0973 0.233523 18.1234 3.11982C20.0262 5.82618 17.8966 10.0681 15.1977 12.2815Z" fill="#9327FF"/>
+        <path d="M37.1041 18.4804C34.3312 20.4276 29.9561 18.1551 27.7896 15.3698C25.9878 11.261 22.5568 3.1296 25.4283 1.88487C28.0163 0.763384 33.4364 2.99404 36.8403 7.01661C40.5104 12.4564 39.9337 16.4963 37.1041 18.4804Z" fill="#00C8FF"/>
+        <path d="M33.3933 36.1608C33.2947 36.2372 33.1986 36.3087 33.1024 36.3753C27.4999 40.319 23.3098 39.7644 21.2837 36.883C19.3833 34.1717 21.508 29.9372 24.207 27.7213C28.2098 25.959 36.7085 22.2987 37.9852 25.2319C39.055 27.6991 37.0733 32.7471 33.3933 36.1608Z" fill="#FFCE00"/>
+        <path d="M13.9817 38.1181C11.4035 39.2371 5.99815 37.0163 2.59179 33.011C-1.09802 27.5687 -0.516326 23.5067 2.30834 21.5201C5.07878 19.5729 9.45627 21.843 11.6204 24.6307C13.4246 28.742 16.8532 36.8709 13.9817 38.1181Z" fill="#FB006D"/>
+      </g>
+    </svg>
+    <div>
+      <div class="font-mono text-[12px] tracking-[0.2em] text-[#8427E0] uppercase mb-1">AppFlowy · Theme Generator</div>
+      <h1 class="text-[clamp(28px,4vw,44px)] font-bold leading-tight"
+          style="background: linear-gradient(90deg, #8427e0, #a44dff, #ba7afc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Theme Generator</h1>
+    </div>
   </div>
-  <h1 class="text-[clamp(26px,3.5vw,38px)] font-bold mb-1.5">Theme Generator</h1>
-  <p class="text-[13px] text-[#6b6b80] font-mono">
+  <p class="text-[15px] text-[#6F748C] mt-1">
     Adjust colours → download .zip → import into AppFlowy
   </p>
 </header>
@@ -28,21 +39,17 @@
 <div class="max-w-[980px] mx-auto grid grid-cols-[360px_1fr] gap-5 items-start max-[720px]:grid-cols-1">
 
   <!-- ── Left panel: colour palette ────────────────────────────────────────── -->
-  <div class="bg-[#16161a] border border-[#2a2a35] rounded-xl p-5">
-    <div class="font-mono text-[10px] tracking-[0.15em] text-[#6b6b80] uppercase mb-4 pb-2.5 border-b border-[#2a2a35]">
-      Colour Palette
-    </div>
+  <div class="bg-white border border-[#9327ff]/10 rounded-xl p-6 shadow-sm">
+    <div class="font-semibold text-[13px] text-[#101012] mb-1">Colour Palette</div>
+    <div class="text-[12px] text-[#6F748C] mb-5 pb-4 border-b border-[#9327ff]/10">Click any swatch or type a hex value to adjust</div>
 
     <!-- Warning notice -->
-    <div class="flex gap-2.5 items-start bg-amber-500/[0.08] border border-amber-500/25 rounded-lg px-3 py-2.5 mb-5">
-      <div class="text-sm shrink-0 mt-px">⚠</div>
-      <div class="font-mono text-[10px] text-amber-400 leading-[1.7]">
-        <strong class="text-amber-300 font-medium">Primary buttons cannot be controlled via JSON.</strong><br>
-        AppFlowy primary buttons (e.g. "Sign In", "Create") use Flutter's
-        <code>MaterialTheme.primary</code>, which is defined in Dart source — not in the
-        theme JSON file. Recompiling the app is the only way to change them.<br><br>
-        What you <em>can</em> control:
-        <strong class="text-amber-300">accent, sidebar, text, tags, hover, separators.</strong>
+    <div class="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3.5 mb-6">
+      <div class="text-base shrink-0 mt-0.5">⚠️</div>
+      <div class="text-[13px] text-amber-800 leading-[1.65]">
+        <strong class="font-semibold text-amber-900">Some colors can't be changed via JSON.</strong><br>
+        AppFlowy's primary action buttons (e.g. “Sign In”) get their color from Flutter's source code — not from the theme file. You'd need to recompile the app to change those.<br><br>
+        <span class="text-amber-700">Everything in this panel <em>is</em> JSON-controlled: accent color, sidebar, text, tags, hover & borders.</span>
       </div>
     </div>
 
@@ -54,72 +61,127 @@
   <div class="sticky top-5 flex flex-col gap-4 max-[720px]:static">
 
     <!-- Live preview -->
-    <div class="bg-[#16161a] border border-[#2a2a35] rounded-xl p-5">
-      <div class="font-mono text-[10px] tracking-[0.15em] text-[#6b6b80] uppercase mb-4 pb-2.5 border-b border-[#2a2a35]">
-        Live Preview · what the JSON actually controls
-      </div>
+    <div class="bg-white border border-[#9327ff]/10 rounded-xl p-6 shadow-sm">
+      <div class="font-semibold text-[13px] text-[#101012] mb-1">Live Preview</div>
+      <div class="text-[12px] text-[#6F748C] mb-5 pb-4 border-b border-[#9327ff]/10">Updates in real-time as you adjust colours</div>
 
-      <div class="rounded-[10px] overflow-hidden border border-[#2a2a35] font-mono" id="mockApp">
-        <div class="grid grid-cols-[170px_1fr] h-[300px]">
+      <div class="rounded-lg overflow-hidden border border-[#3d404f]"
+           style="font-family: ui-sans-serif, system-ui, sans-serif;" id="mockApp">
+        <div class="grid grid-cols-[200px_1fr] h-[380px]">
 
-          <!-- Sidebar mock -->
-          <div class="flex flex-col" id="mockSidebar">
-            <div class="pt-[11px] px-3 pb-[7px] text-[11px] font-semibold flex items-center gap-1.5"
-                 id="mockSidebarHeader">
-              🗂 My Workspace
+          <!-- Sidebar -->
+          <div class="flex flex-col border-r border-[#3d404f]" id="mockSidebar">
+            <!-- App header -->
+            <div class="h-[48px] px-3 flex items-center justify-between shrink-0">
+              <div class="flex items-center gap-2">
+                <div class="w-[20px] h-[20px] rounded-full shrink-0"
+                     style="background: linear-gradient(135deg,#00b5ff,#9327ff)"></div>
+                <span class="text-[13px] font-semibold" id="mockSidebarHeader">AppFlowy</span>
+              </div>
+              <div class="flex gap-2 text-[11px] opacity-30">⚙ 🔔</div>
             </div>
-            <div class="px-1.5 flex-1 overflow-hidden">
-              <div class="px-2 pt-1.5 pb-0.5 text-[9px] tracking-[0.08em] uppercase opacity-35">Pages</div>
-              <div class="px-2 py-[5px] rounded-md text-[11px] flex items-center gap-1.5 mb-0.5" id="mockItem1">
-                <span class="text-[11px] w-3.5 text-center shrink-0">📄</span><span>Notes</span>
+            <!-- Nav -->
+            <div class="px-2 flex-1 overflow-hidden">
+              <div class="px-2 py-[5px] rounded-[6px] text-[12px] flex items-center gap-2 mb-0.5 opacity-40" id="mockItem2">
+                <span>＋</span><span>New page</span>
               </div>
-              <div class="px-2 py-[5px] rounded-md text-[11px] flex items-center gap-1.5 mb-0.5" id="mockItem2">
-                <span class="text-[11px] w-3.5 text-center shrink-0">🗃</span><span>Projects</span>
+              <div class="px-2 py-[5px] rounded-[6px] text-[12px] flex items-center gap-2 mb-0.5" id="mockItem3">
+                <span>⭐</span><span>Favorites</span>
               </div>
-              <div class="px-2 py-[5px] rounded-md text-[11px] flex items-center gap-1.5 mb-0.5" id="mockItem3">
-                <span class="text-[11px] w-3.5 text-center shrink-0">📊</span><span>Grid</span>
+              <div class="px-2 py-[5px] rounded-[6px] text-[12px] flex items-center gap-2 mb-1.5" id="mockItem4">
+                <span>📚</span><span>Company Wiki</span>
               </div>
-              <div class="px-2 pt-1.5 mt-1.5 pb-0.5 text-[9px] tracking-[0.08em] uppercase opacity-35">
-                Favourites
+              <!-- Team Space group -->
+              <div class="px-2 py-[4px] text-[11px] flex items-center gap-1.5 mb-0.5 opacity-35">
+                <span>👥</span><span class="flex-1">Team Space</span><span>›</span>
               </div>
-              <div class="px-2 py-[5px] rounded-md text-[11px] flex items-center gap-1.5 mb-0.5" id="mockItem4">
-                <span class="text-[11px] w-3.5 text-center shrink-0">⭐</span><span>Starred</span>
+              <div class="pl-4">
+                <div class="px-2 py-[4px] text-[11px] opacity-35 mb-0.5">🚀 Projects</div>
+                <div class="pl-3">
+                  <div class="px-2 py-[4px] text-[10px] opacity-25 mb-0.5">🎯 OKRs</div>
+                  <div class="px-2 py-[5px] rounded-[6px] text-[12px] flex items-center gap-1.5 mb-0.5" id="mockItem1">
+                    <span>🤖</span><span>Ask AI</span>
+                  </div>
+                  <div class="px-2 py-[4px] text-[10px] opacity-25">🚀 HR Tracker</div>
+                </div>
               </div>
             </div>
-            <div class="p-2 border-t border-white/5 flex items-center gap-[7px]">
-              <div class="w-[22px] h-[22px] rounded-full flex items-center justify-center text-[10px] font-semibold"
-                   id="mockAvatar">A</div>
-              <span class="text-[10px]" id="mockUsername">Alex</span>
+            <!-- Footer -->
+            <div class="shrink-0 border-t border-[#3d404f]/40">
+              <div class="px-3 py-1.5 flex gap-3 text-[10px] opacity-25">
+                <span>Templates</span><span>·</span><span>🗑 Trash</span>
+              </div>
+              <div class="px-3 pb-3 flex items-center gap-2">
+                <div class="w-[22px] h-[22px] rounded-full flex items-center justify-center text-[10px] font-semibold shrink-0"
+                     id="mockAvatar">A</div>
+                <span class="text-[12px]" id="mockUsername">Alex</span>
+              </div>
             </div>
           </div>
 
-          <!-- Editor content mock -->
+          <!-- Content area -->
           <div class="flex flex-col" id="mockContent">
-            <div class="px-3.5 pt-2.5 pb-2 text-[11px] font-semibold flex items-center justify-between border-b border-white/5"
+            <!-- Top bar / breadcrumb -->
+            <div class="h-[48px] px-4 flex items-center justify-between border-b border-[#3d404f]/50 shrink-0"
                  id="mockContentTop">
-              <span id="mockPageTitle">Work notes</span>
-              <span class="text-[10px] opacity-35">···</span>
+              <div class="flex items-center gap-1.5 text-[12px]">
+                <span class="opacity-40">Team Space</span>
+                <span class="opacity-25">›</span>
+                <span class="opacity-40">Projects</span>
+                <span class="opacity-25">›</span>
+                <span id="mockPageTitle">Ask AI</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <!-- Share = hardcoded AppFlowy blue — NOT user-controllable -->
+                <div class="px-3 py-1 rounded-[8px] text-[12px] font-medium text-white"
+                     style="background:#00b5ff">Share</div>
+                <span class="opacity-20 text-[13px]">⭐ ···</span>
+              </div>
             </div>
-            <div class="p-3.5 flex-1 overflow-hidden">
-              <div class="text-[15px] font-bold mb-[7px]" id="mockHeading">Monday meeting</div>
-              <div class="text-[11px] leading-[1.65] mb-2.5" id="mockText">
-                Key points from the weekly sync. Important notes to keep.
+
+            <!-- Page content -->
+            <div class="flex-1 overflow-hidden px-4 pt-3.5">
+              <!-- Context prompt -->
+              <div class="text-[11px] opacity-35 mb-2">Generate TL;DR across these pages</div>
+              <div class="flex gap-1.5 mb-4 flex-wrap">
+                <span class="px-2 py-[3px] rounded-[6px] border text-[11px]" id="mockTag1">📄 Product roadmap</span>
+                <span class="px-2 py-[3px] rounded-[6px] border text-[11px]" id="mockTag2">📊 Market analysis</span>
+                <span class="px-2 py-[3px] rounded-[6px] border text-[11px]" id="mockTag3">📝 Context</span>
               </div>
-              <div class="flex gap-1.5 mb-3 flex-wrap">
-                <span class="px-[7px] py-0.5 rounded text-[10px]" id="mockTag1">urgent</span>
-                <span class="px-[7px] py-0.5 rounded text-[10px]" id="mockTag2">in progress</span>
-                <span class="px-[7px] py-0.5 rounded text-[10px]" id="mockTag3">review</span>
-              </div>
-              <div class="flex gap-2 items-center">
-                <div class="px-[13px] py-[6px] rounded-md text-[11px] font-semibold" id="mockBtnAccent">
-                  + New
+              <!-- AI response -->
+              <div class="flex gap-2.5">
+                <div class="w-[18px] h-[18px] rounded-full shrink-0 mt-0.5"
+                     style="background: linear-gradient(135deg,#00b5ff,#9327ff)"></div>
+                <div class="min-w-0">
+                  <div class="text-[13px] font-semibold mb-1" id="mockHeading">In Summary:</div>
+                  <div class="text-[12px] leading-[1.65] mb-3" id="mockText">
+                    · Launch sooner than you think.<br>
+                    · Let optimism shape your reality.
+                  </div>
+                  <div class="text-[13px] font-semibold mb-1.5">To-do list:</div>
+                  <div class="flex flex-col gap-[7px]">
+                    <div class="flex items-center gap-2 text-[12px]">
+                      <div class="w-[13px] h-[13px] rounded-[3px] border border-white/25 shrink-0"></div>
+                      <span id="mockNotice">Analyze user testing data</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-[12px] opacity-30">
+                      <div class="w-[13px] h-[13px] rounded-[3px] border border-white/15 shrink-0"></div>
+                      <span>Draft product requirements</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="px-[13px] py-[6px] rounded-md text-[11px] border bg-transparent" id="mockBtnGhost">
-                  Share
-                </div>
               </div>
-              <div class="text-[9px] mt-2" id="mockNotice">
-                ⚠ AppFlowy primary buttons (Sign In, Create…) cannot be changed via JSON
+            </div>
+
+            <!-- Bottom actions -->
+            <div class="px-4 pb-4 pt-2 flex flex-col gap-2 shrink-0">
+              <div class="py-[6px] text-center rounded-[8px] text-[12px] font-medium border" id="mockBtnAccent">
+                Save as a page
+              </div>
+              <div class="flex items-center gap-2 rounded-[8px] border border-[#3d404f] px-3 py-[6px]">
+                <span class="text-[12px] opacity-20 flex-1">Ask AppFlowy AI</span>
+                <div class="w-[20px] h-[20px] rounded-[6px] flex items-center justify-center text-[10px] font-semibold"
+                     id="mockBtnGhost" style="border:1px solid">›</div>
               </div>
             </div>
           </div>
@@ -129,21 +191,20 @@
     </div>
 
     <!-- Export controls -->
-    <div class="bg-[#16161a] border border-[#2a2a35] rounded-xl p-5">
-      <div class="font-mono text-[10px] tracking-[0.15em] text-[#6b6b80] uppercase mb-4 pb-2.5 border-b border-[#2a2a35]">
-        Export
-      </div>
+    <div class="bg-white border border-[#9327ff]/10 rounded-xl p-6 shadow-sm">
+      <div class="font-semibold text-[13px] text-[#101012] mb-1">Export Theme</div>
+      <div class="text-[12px] text-[#6F748C] mb-5 pb-4 border-b border-[#9327ff]/10">Download a .zip ready to import into AppFlowy</div>
 
       <div class="flex flex-col gap-1.5 mb-4">
-        <label for="themeName" class="font-mono text-[10px] text-[#6b6b80] tracking-[0.1em] uppercase">
+        <label for="themeName" class="text-[12px] font-medium text-[#101012] tracking-[0.01em]">
           Theme name
         </label>
         <input type="text" id="themeName" value="Monochrome" placeholder="e.g. Monochrome"
-               class="bg-[#1e1e24] border border-[#2a2a35] text-[#e8e8f0] rounded-lg px-3 py-2.5 font-mono text-[13px] w-full focus:outline-none focus:border-[#a8c5ff]">
+               class="bg-[#F4F5F7] border border-[#9327ff]/15 text-[#101012] rounded-lg px-3 py-3 text-[14px] w-full focus:outline-none focus:border-[#8427E0] placeholder:text-[#6F748C]">
       </div>
 
       <button id="btnDownload"
-              class="bg-[#a8c5ff] text-[#0a0a14] rounded-lg py-3 px-5 font-sans text-[13px] font-semibold cursor-pointer w-full transition-opacity flex items-center justify-center gap-2 hover:opacity-[0.88] active:scale-[0.98] mb-4">
+              class="bg-[#8427E0] text-white rounded-[18px] py-3.5 px-5 text-[14px] font-semibold cursor-pointer w-full transition-all flex items-center justify-center gap-2 hover:bg-[#A952FF] active:scale-[0.98] mb-5">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2.5" aria-hidden="true">
           <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
@@ -153,21 +214,21 @@
         Download .zip
       </button>
 
-      <div class="bg-[#1e1e24] border border-[#2a2a35] rounded-lg p-3.5 font-mono text-[10px] text-[#6b6b80] leading-[1.8]">
-        <div class="flex gap-2 mb-0.5">
-          <span class="text-[#a8c5ff] shrink-0">1.</span><span>Download the .zip</span>
+      <div class="bg-[#F9F9FC] border border-[#9327ff]/10 rounded-xl p-4 text-[12px] text-[#6F748C] leading-[2]">
+        <div class="flex gap-3 mb-0.5">
+          <span class="text-[#8427E0] shrink-0 font-semibold">1.</span><span>Download the .zip</span>
         </div>
-        <div class="flex gap-2 mb-0.5">
-          <span class="text-[#a8c5ff] shrink-0">2.</span><span>Unzip → folder <code>Name.flowy_plugin</code></span>
+        <div class="flex gap-3 mb-0.5">
+          <span class="text-[#8427E0] shrink-0 font-semibold">2.</span><span>Unzip → you get a folder named <code class="bg-[#9327ff]/8 px-1 rounded">Name.flowy_plugin</code></span>
         </div>
-        <div class="flex gap-2 mb-0.5">
-          <span class="text-[#a8c5ff] shrink-0">3.</span><span>AppFlowy → Settings → Appearance → ↑ upload</span>
+        <div class="flex gap-3 mb-0.5">
+          <span class="text-[#8427E0] shrink-0 font-semibold">3.</span><span>Open AppFlowy → Settings → Appearance → click “Upload theme”</span>
         </div>
-        <div class="flex gap-2 mb-0.5">
-          <span class="text-[#a8c5ff] shrink-0">4.</span><span>Select the <code>.flowy_plugin</code> folder</span>
+        <div class="flex gap-3 mb-0.5">
+          <span class="text-[#8427E0] shrink-0 font-semibold">4.</span><span>Select the <code class="bg-[#9327ff]/8 px-1 rounded">.flowy_plugin</code> folder</span>
         </div>
-        <div class="flex gap-2">
-          <span class="text-[#a8c5ff] shrink-0">5.</span><span>Choose your theme from the list</span>
+        <div class="flex gap-3">
+          <span class="text-[#8427E0] shrink-0 font-semibold">5.</span><span>Choose your theme from the list — done!</span>
         </div>
       </div>
     </div>
@@ -177,7 +238,7 @@
 
 <!-- Toast notification -->
 <div id="toast"
-     class="fixed bottom-6 left-1/2 bg-[#4ade80] text-[#0a1a0a] px-5 py-2.5 rounded-lg font-mono text-[12px] font-medium z-[100]"
+     class="fixed bottom-6 left-1/2 bg-[#8427E0] text-white px-5 py-2.5 rounded-[14px] font-mono text-[12px] font-medium z-[100]"
      role="status" aria-live="polite"></div>
 
 <!-- Compiled bundle (built with: npm run build) -->
