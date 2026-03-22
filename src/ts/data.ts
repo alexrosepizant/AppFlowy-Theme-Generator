@@ -2,28 +2,6 @@ import type { ColorGroup } from "./types";
 
 export const COLOR_GROUPS: ColorGroup[] = [
   {
-    label: "Accent & Selection",
-    badge: { text: "JSON-controlled", cls: "bg-[#8427E0]/10 text-[#8427E0]" },
-    colors: [
-      [
-        "main",
-        "Accent colour",
-        "Active sidebar items, links, selected icons, tints (main1 / main2)",
-        "#e8e8e8",
-        100,
-        "accent",
-      ],
-      [
-        "selector",
-        "Selection background",
-        "Background of the selected sidebar item (derived: accent @ 12%)",
-        "#e8e8e8",
-        12,
-        "accent",
-      ],
-    ],
-  },
-  {
     label: "Sidebar",
     badge: { text: "JSON-controlled", cls: "bg-[#66CF80]/15 text-[#66CF80]" },
     colors: [
@@ -60,6 +38,28 @@ export const COLOR_GROUPS: ColorGroup[] = [
         "Background of text inputs and the floating toolbar (input / toolbarColor)",
         "#181818",
         100,
+      ],
+    ],
+  },
+  {
+    label: "Accent & Selection",
+    badge: { text: "JSON-controlled", cls: "bg-[#8427E0]/10 text-[#8427E0]" },
+    colors: [
+      [
+        "main",
+        "Accent colour",
+        "Active sidebar items, links, selected icons, tints (main1 / main2)",
+        "#e8e8e8",
+        100,
+        "accent",
+      ],
+      [
+        "selector",
+        "Selection background",
+        "Background of the selected sidebar item (derived: accent @ 12%)",
+        "#e8e8e8",
+        12,
+        "accent",
       ],
     ],
   },
