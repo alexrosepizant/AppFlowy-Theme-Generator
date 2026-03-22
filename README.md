@@ -1,6 +1,9 @@
 # AppFlowy Theme Generator
 
-Single-page tool to build and export custom [AppFlowy](https://appflowy.io) themes as `.flowy_plugin` archives.
+[![Build & Deploy](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml/badge.svg)](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+Single-page tool to build and export custom [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy) themes as `.flowy_plugin` archives.
 
 ## Features
 
@@ -12,8 +15,8 @@ Single-page tool to build and export custom [AppFlowy](https://appflowy.io) them
 ## Quick start
 
 ```bash
-git clone https://github.com/your-username/appflowy-theme-generator.git
-cd appflowy-theme-generator
+git clone https://github.com/alexrosepizant/AppFlowy-Theme-Generator.git
+cd AppFlowy-Theme-Generator
 
 npm install
 npm run build
@@ -23,9 +26,10 @@ open index.html
 ## Development
 
 ```bash
-npm run dev       # watch mode — rebuilds dist/bundle.js on every save
+npm run dev:js    # watch JS — rebuilds dist/bundle.js on save
+npm run dev:css   # watch CSS — rebuilds dist/styles.css on save
 npm run typecheck # type-check only (no emit)
-npm run build     # type-check + bundle → dist/bundle.js
+npm run build     # full build: tsc + esbuild + tailwindcss
 ```
 
 ## How to use
@@ -95,9 +99,10 @@ AppFlowy requires **both** a `.dark.json` and a `.light.json` file inside the `.
 | [JSZip](https://stuk.github.io/jszip/)                              | 3.10.1  | MIT        |
 | [esbuild](https://esbuild.github.io/)                               | ^0.25   | MIT        |
 | [TypeScript](https://www.typescriptlang.org/)                       | ^5.8    | Apache-2.0 |
+| [Tailwind CSS](https://tailwindcss.com/)                            | ^4.0    | MIT        |
 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Google Fonts) | —       | OFL-1.1    |
 | [Syne](https://fonts.google.com/specimen/Syne) (Google Fonts)       | —       | OFL-1.1    |
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT © [Alex Rose-Pizant](https://github.com/alexrosepizant) — see [LICENSE](LICENSE).
