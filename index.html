@@ -8,12 +8,14 @@
   <!-- Styles -->
   <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body class="text-[#101012] font-sans min-h-screen px-6 py-12">
+<body class="text-[#101012] font-sans min-h-screen px-6 sm:px-10 lg:px-16 py-12" style="padding-left: clamp(1.5rem, 8vw, 10rem); padding-right: clamp(1.5rem, 8vw, 10rem);">
 
-<header class="max-w-[980px] mx-auto mb-12">
-  <div class="flex items-center gap-3 mb-3">
+<header class="max-w-[1400px] mx-auto mb-12 text-center">
+
+  <!-- Logo + title -->
+  <div class="flex flex-col items-center gap-3 mb-4">
     <!-- Custom palette icon — not the AppFlowy logo -->
-    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Theme Generator">
+    <svg width="64" height="64" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Theme Generator">
       <rect width="52" height="52" rx="14" fill="url(#palGrad)"/>
       <defs>
         <linearGradient id="palGrad" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
@@ -21,29 +23,25 @@
           <stop offset="100%" stop-color="#a44dff"/>
         </linearGradient>
       </defs>
-      <!-- palette circles -->
       <circle cx="26" cy="17" r="4" fill="#00C8FF"/>
       <circle cx="35" cy="23" r="4" fill="#FFCE00"/>
       <circle cx="35" cy="33" r="4" fill="#FB006D"/>
       <circle cx="26" cy="38" r="4" fill="#66CF80"/>
       <circle cx="17" cy="33" r="4" fill="#F7931E"/>
       <circle cx="17" cy="23" r="4" fill="#ffffff" fill-opacity="0.9"/>
-      <!-- center hole -->
       <circle cx="26" cy="28" r="5" fill="white"/>
     </svg>
-    <div>
-      <div class="font-mono text-[12px] tracking-[0.2em] text-[#8427E0] uppercase mb-1">Theme Generator · for AppFlowy</div>
-      <h1 class="text-[clamp(28px,4vw,44px)] font-bold leading-tight"
-          style="background: linear-gradient(90deg, #8427e0, #a44dff, #ba7afc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Theme Generator</h1>
-    </div>
+    <div class="font-mono text-[12px] tracking-[0.2em] text-[#8427E0] uppercase">Theme Generator · for AppFlowy</div>
+    <h1 class="text-[clamp(32px,5vw,56px)] font-bold leading-tight"
+        style="background: linear-gradient(90deg, #8427e0, #a44dff, #ba7afc); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Theme Generator</h1>
   </div>
-  <div class="flex items-center justify-between mt-2">
-    <div>
-      <p class="text-[15px] text-[#6F748C]">
-        Adjust colours → download .zip → import into AppFlowy
-      </p>
-      <p class="text-[11px] text-[#9BA3B5] mt-1">Unofficial community tool — not affiliated with or endorsed by AppFlowy.</p>
-    </div>
+
+  <!-- Description + disclaimer -->
+  <p class="text-[15px] text-[#6F748C] mb-1">Adjust colours → download .zip → import into AppFlowy</p>
+  <p class="text-[11px] text-[#9BA3B5] mb-6">Unofficial community tool — not affiliated with or endorsed by AppFlowy.</p>
+
+  <!-- GitHub star button -->
+  <div class="flex justify-center">
     <a href="https://github.com/alexrosepizant/AppFlowy-Theme-Generator"
        target="_blank" rel="noopener noreferrer"
        class="flex items-center gap-2 px-4 py-2 rounded-xl border border-[#9327ff]/15 bg-white hover:bg-[#8427E0]/5 hover:border-[#8427E0]/30 transition-colors text-[13px] font-medium text-[#101012] no-underline shadow-sm"
@@ -60,22 +58,25 @@
   </div>
 </header>
 
-<div class="max-w-[980px] mx-auto grid grid-cols-[360px_1fr] gap-5 items-start max-[720px]:grid-cols-1">
+<!-- Warning notice -->
+<div class="max-w-[1400px] mx-auto mb-5">
+  <div class="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3.5">
+    <div class="text-base shrink-0 mt-0.5">⚠️</div>
+    <div class="text-[13px] text-amber-800 leading-[1.65]">
+      <strong class="font-semibold text-amber-900">Some colors can't be changed via JSON.</strong><br>
+      AppFlowy's primary action buttons (e.g. "Sign In") get their color from Flutter's source code — not from the theme file. You'd need to recompile the app to change those.<br><br>
+      <span class="text-amber-700">Everything in this panel <em>is</em> JSON-controlled: accent color, sidebar, text, tags, hover &amp; borders.</span>
+    </div>
+  </div>
+</div>
+
+<div class="max-w-[1400px] mx-auto grid grid-cols-[360px_1fr] xl:grid-cols-[420px_1fr] gap-5 xl:gap-8 items-start max-[720px]:grid-cols-1">
 
   <!-- ── Left panel: colour palette ────────────────────────────────────────── -->
   <div class="bg-white border border-[#9327ff]/10 rounded-xl p-6 shadow-sm">
     <div class="font-semibold text-[13px] text-[#101012] mb-1">Colour Palette</div>
     <div class="text-[12px] text-[#6F748C] mb-5 pb-4 border-b border-[#9327ff]/10">Click any swatch or type a hex value to adjust</div>
 
-    <!-- Warning notice -->
-    <div class="flex gap-3 items-start bg-amber-50 border border-amber-200 rounded-xl px-4 py-3.5 mb-6">
-      <div class="text-base shrink-0 mt-0.5">⚠️</div>
-      <div class="text-[13px] text-amber-800 leading-[1.65]">
-        <strong class="font-semibold text-amber-900">Some colors can't be changed via JSON.</strong><br>
-        AppFlowy's primary action buttons (e.g. “Sign In”) get their color from Flutter's source code — not from the theme file. You'd need to recompile the app to change those.<br><br>
-        <span class="text-amber-700">Everything in this panel <em>is</em> JSON-controlled: accent color, sidebar, text, tags, hover & borders.</span>
-      </div>
-    </div>
 
     <!-- Colour rows injected by renderGroups() -->
     <div id="colorGroups"></div>
@@ -91,7 +92,7 @@
 
       <div class="rounded-lg overflow-hidden border border-[#3d404f]"
            style="font-family: ui-sans-serif, system-ui, sans-serif;" id="mockApp">
-        <div class="grid grid-cols-[200px_1fr] h-[380px]">
+        <div class="grid grid-cols-[200px_1fr] xl:grid-cols-[240px_1fr] h-[380px] xl:h-[480px]">
 
           <!-- Sidebar -->
           <div class="flex flex-col border-r border-[#3d404f]" id="mockSidebar">
@@ -199,7 +200,7 @@
 
             <!-- Bottom actions -->
             <div class="px-4 pb-4 pt-2 flex flex-col gap-2 shrink-0">
-              <div class="py-[6px] text-center rounded-[8px] text-[12px] font-medium border" id="mockBtnAccent">
+              <div class="py-[6px] px-4 text-center rounded-[8px] text-[12px] font-medium border" style="width:fit-content" id="mockBtnAccent">
                 Save as a page
               </div>
               <div class="flex items-center gap-2 rounded-[8px] border border-[#3d404f] px-3 py-[6px]">
