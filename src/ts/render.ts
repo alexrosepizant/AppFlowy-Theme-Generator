@@ -56,10 +56,17 @@ function buildRow([key, label, desc, , , style]: ColorDef): HTMLElement {
 
 export function bindColorEvents(): void {
   const container = el("colorGroups");
+  let previewFrame: number | null = null;
 
-  container.addEventListener("change", (e) => {
-    const input = e.target as HTMLInputElement;
-    if (input.type !== "color") return;
+  const schedulePreviewUpdate = (): void => {
+    if (previewFrame !== null) return;
+    previewFrame = window.requestAnimationFrame(() => {
+      previewFrame = null;
+      updatePreview();
+    });
+  };
+
+  const handleColorPickerChange = (input: HTMLInputElement): void => {
     const { key } = input.dataset as { key?: string };
     const entry = key ? state[key] : null;
     if (!key || !entry) return;
@@ -68,11 +75,21 @@ export function bindColorEvents(): void {
     el(`sw_${key}`).style.background = input.value;
     el<HTMLInputElement>(`hi_${key}`).value = input.value.toUpperCase();
     if (key === "main") syncTints();
-    updatePreview();
+    schedulePreviewUpdate();
+  };
+
+  container.addEventListener("change", (e) => {
+    const input = e.target as HTMLInputElement;
+    if (input.type !== "color") return;
+    handleColorPickerChange(input);
   });
 
   container.addEventListener("input", (e) => {
     const input = e.target as HTMLInputElement;
+    if (input.type === "color") {
+      handleColorPickerChange(input);
+      return;
+    }
     if (!input.classList.contains("hex-input")) return;
     const { key } = input.dataset as { key?: string };
     const entry = key ? state[key] : null;
@@ -88,6 +105,6 @@ export function bindColorEvents(): void {
     const picker = swatch.querySelector<HTMLInputElement>("input[type=color]");
     if (picker) picker.value = value;
     if (key === "main") syncTints();
-    updatePreview();
+    schedulePreviewUpdate();
   });
 }
