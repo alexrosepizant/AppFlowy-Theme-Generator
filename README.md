@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/logo.svg" width="64" height="64" alt="Theme Generator for AppFlowy">
-</p>
-
 # Theme Generator for AppFlowy
 
 > Unofficial community tool — not affiliated with or endorsed by [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy).
