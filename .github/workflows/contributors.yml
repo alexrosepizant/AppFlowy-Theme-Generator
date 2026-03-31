@@ -1,0 +1,23 @@
+name: All Contributors
+
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  all-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: All Contributors
+        uses: all-contributors/action@v0.26.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

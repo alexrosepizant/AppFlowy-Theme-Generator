@@ -1,0 +1,24 @@
+{
+  "projectName": "appflowy-theme-generator",
+  "projectOwner": "alexrosepizant",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "contributors": [
+    {
+      "login": "alexrosepizant",
+      "name": "Alexandre Rose-Pizant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9919730?v=4",
+      "profile": "https://github.com/alexrosepizant",
+      "contributions": ["code", "doc"]
+    },
+    {
+      "login": "Mayur-Mahajan-Realtimate",
+      "name": "Mayur-Mahajan-Realtimate",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102964655?v=4",
+      "profile": "https://github.com/Mayur-Mahajan-Realtimate",
+      "contributions": ["code"]
+    }
+  ],
+  "commitConvention": "angular"
+}
+

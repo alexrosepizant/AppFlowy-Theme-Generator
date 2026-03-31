@@ -23,6 +23,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@tailwindcss/cli": "^4.2.2",
+    "all-contributors-cli": "^6.26.1",
     "esbuild": "^0.25.0",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",

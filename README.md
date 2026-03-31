@@ -2,6 +2,7 @@
 
 > Unofficial community tool — not affiliated with or endorsed by [AppFlowy](https://github.com/AppFlowy-IO/AppFlowy).
 
+[![All Contributors](https://img.shields.io/github/all-contributors/alexrosepizant/appflowy-theme-generator?color=ee8449&style=flat-square)](#contributors)
 [![Build & Deploy](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml/badge.svg)](https://github.com/alexrosepizant/AppFlowy-Theme-Generator/actions/workflows/static.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -113,6 +114,23 @@ AppFlowy requires **both** a `.dark.json` and a `.light.json` file inside the `.
 | [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts)     | —       | OFL-1.1    |
 | [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Google Fonts) | —       | OFL-1.1    |
 
-## License
+## Contributors
 
-MIT © [Alex Rose-Pizant](https://github.com/alexrosepizant) — see [LICENSE](LICENSE).
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alexrosepizant"><img src="https://avatars.githubusercontent.com/u/9919730?v=4?s=100" width="100px;" alt="Alexandre Rose-Pizant"/><br /><sub><b>Alexandre Rose-Pizant</b></sub></a><br /><a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=alexrosepizant" title="Code">💻</a> <a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=alexrosepizant" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mayur-Mahajan-Realtimate"><img src="https://avatars.githubusercontent.com/u/102964655?v=4?s=100" width="100px;" alt="Mayur-Mahajan-Realtimate"/><br /><sub><b>Mayur-Mahajan-Realtimate</b></sub></a><br /><a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=Mayur-Mahajan-Realtimate" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
