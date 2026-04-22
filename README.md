@@ -122,7 +122,7 @@ AppFlowy requires **both** a `.dark.json` and a `.light.json` file inside the `.
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alexrosepizant"><img src="https://avatars.githubusercontent.com/u/9919730?v=4?s=100" width="100px;" alt="Alexandre Rose-Pizant"/><br /><sub><b>Alexandre Rose-Pizant</b></sub></a><br /><a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=alexrosepizant" title="Code">💻</a> <a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=alexrosepizant" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alexrosepizant"><img src="https://avatars.githubusercontent.com/u/9919730?v=4?s=100" width="100px;" alt="Alex Rose-Pizant"/><br /><sub><b>Alex Rose-Pizant</b></sub></a><br /><a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=alexrosepizant" title="Code">💻</a> <a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=alexrosepizant" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mayur-Mahajan-Realtimate"><img src="https://avatars.githubusercontent.com/u/102964655?v=4?s=100" width="100px;" alt="Mayur-Mahajan-Realtimate"/><br /><sub><b>Mayur-Mahajan-Realtimate</b></sub></a><br /><a href="https://github.com/alexrosepizant/appflowy-theme-generator/commits?author=Mayur-Mahajan-Realtimate" title="Code">💻</a></td>
     </tr>
   </tbody>
